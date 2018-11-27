@@ -153,9 +153,6 @@ $articulos = [
 
 
 
-
-
-
 	</header>
 	<body>
 		<div class="nav">
