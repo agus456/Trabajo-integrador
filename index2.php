@@ -34,7 +34,7 @@ function calcularColor($imagenPublic) {
 $articulo1 = [
 	"id" => 1,
 	"nombre" => "Coca Cola",
-	"descripcion" => "<br>3 Litros",
+	"descripcion" => "<br>3 Litros Coca Cola",
 	"imagen" => "coca-cola-3l.png",
 	"imagenPublic"=>"ofertas.png",
 	"precio" =>  99.90
@@ -63,7 +63,7 @@ $articulo3["color"] = calcularColor($articulo3["imagenPublic"]);
 $articulo4 = [
 	"id" => 1,
 	"nombre" => "Coca Cola",
-	"descripcion" => "<br>3 Litros",
+	"descripcion" => "<br>3 Litros Coca Cola",
 	"imagen" => "coca-cola-3l.png",
 	"imagenPublic"=>"compras.png",
 	"precio" =>  99.90
@@ -90,7 +90,7 @@ $articulo6["color"] = calcularColor($articulo6["imagenPublic"]);
 $articulo7 = [
 	"id" => 1,
 	"nombre" => "Coca Cola",
-	"descripcion" => "<br>3 Litros",
+	"descripcion" => "<br>3 Litros Coca Cola",
 	"imagen" => "coca-cola-3l.png",
 	"imagenPublic"=>"consultas.png",
 	"precio" =>  99.90
@@ -193,16 +193,23 @@ $articulos = [
 	<option value="9" >Hogar</option>
 	<option value="10" >Aire Libre</option>
 
-	</select>
+</select>
 </div>
 <div class="btn-sel">
 <button id="mostrar" onclick="mostrarcaja()">Tu Listado</botton>
 </div>
 <div class="caja"id="caja" style="display:none">
-	<p> Listado de Productos</p>
-</div>
-</div>
 
+<p>Aquí se irán agregando los productos seleccionados</p>
+
+
+
+
+
+
+	</div>
+</div>
+  <form class="" action="index2.php" method="POST">
 <div class="columnas">
 
 <div class="col2">
@@ -222,21 +229,16 @@ $articulos = [
 			<p style="font-weight:bold;color:<?=$articulos[$i]["color"]?>">
 				Precio: <?=$articulos[$i]["precio"]?>
 			</p>
+<input type="checkbox" value="1" name="<?=$articulos[$i]["nombre"]?>" class="form-check-inline" >
 
-
-
-
-
-
-
-
-
-<input type="checkbox" value="">
 
 				</div>
 			</div>
 			<?php } ?>
+			<div class="">
+				<input type="submit" name="" value="Enviar">
+			</div>
 </div>
-
+</form>
 </body>
 </html>

@@ -41,6 +41,8 @@ flex-direction: column;margin-top: 2%;
 .card{display: flex;
 align-items: stretch;
 width:29%;border-radius: 5%;background-color: white;margin:2%;height: 30vh;position: relative}
+
+i{color:#508fb8 ;font-size: 2.5em;margin:30%;}
 i{color:#508fb8 ;font-size: 2.5em;margin:30%;}
 
 .card-data a{text-decoration: none;
@@ -49,36 +51,15 @@ opacity: 0.8;
 color:white;display: block;
 width: 35%;font-size: 1em;height: 13%;text-align: center;list-style: none;line-height: 35px}
 ul{list-style: none}
-.container{display: flex;flex-wrap: wrap;}
+.container,.nav,.columnas{display: flex;flex-wrap: wrap;}
 span{display: none}
 li{margin-top: 0.5%;}
 
 button{width: 80%;position: relative;left: 10%}
 
 
-@media(max-width: 600px){
-  .card{display: flex;
-  align-items: stretch;
-  width:100%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
-
-}
 
 
-
-@media(min-width: 600px){
-  .card{display: flex;
-  align-items: stretch;
-  width:45%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
-
-  }
-
-
-@media(min-width: 900px) {
-  .card{display: flex;
-  align-items: stretch;
-  width:29%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
-
-  }
 .contacto{position: absolute;top:20%;left: 40%}
 #enviar{width: 50%;position: absolute;left: 0
 }
@@ -98,3 +79,49 @@ ul li a {float: right;
 
 width: 15%;}
 ul{overflow: hidden;}
+
+.container{margin-top: 1%}
+.btn{margin-bottom:1%}
+.col1,.col2{float: left;}
+.col1{width: 15%;height: 5vh;margin-top: 2.2%;border-radius: 2%;display: flex;flex-wrap: wrap}
+.columnas{overflow: hidden;}
+#seleccionar{width: 100%;height: 5vh;border-radius: 7%;}
+.btn-sel{display: flex;flex-direction: column;width:100%;border-radius: 5%;background-color: white;height: 5vh;position: relative;margin-top: 5%;margin-left: 2%}
+.btn-sel button{ background-color: white;width: 100%;height: 100%;margin-left: -10%;border-radius: 10%}
+.caja{width: 100%;height: 50vh;background-color: #e0e0d1;margin-top: 10%;border-radius: 5%;margin-left: 3%}
+@media(max-width: 600px){
+  .card{display: flex;
+  align-items: stretch;
+  width:100%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+  .btn{display: flex;
+flex-direction: row;
+  width:100%;border-radius: 5%;background-color: white;height: 5vh;position: relative}
+  .nav{background-color: grey;height: 30vh}
+
+}
+
+
+
+@media(min-width: 600px){
+  .card{display: flex;
+  align-items: stretch;
+  width:45%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+  .btn{display: flex;
+  align-items: stretch;
+  width:43%;border-radius: 5%;background-color: white;margin-left:5%;margin-top: 5%;height: 5vh;position: relative}
+  .nav{background-color: grey;height: 35vh}
+  .login,.registro{margin-top: -5%}
+
+  }
+
+
+@media(min-width: 900px) {
+  .card{display: flex;
+  align-items: stretch;
+  width:28%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+  .btn{display: flex;
+  align-items: stretch;
+  width:20%;border-radius: 5%;background-color: white;margin:2%;height: 5vh;position: relative}
+  .nav{background-color: grey;margin-bottom: 5%;height: 15vh}
+
+  }
