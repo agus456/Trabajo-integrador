@@ -10,14 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
 	<body>
 	<h1 class="mensaje">Ingresá a nuestra página!</h1>
 		<title>Working Group</title>
 	</head>
 	<div class="contacto">
 	<form id="registro"action="index.html" method="post">
-	<label for="email">Email</label><br>
+	<label for="email">Email email</label><br>
 	<input type="email" name="email" id="email" placeholder="Email"><br><br>
 	<label for="contraseña">Contraseña</label><br>
 	<input type="password" name="contraseña" id="contraseña" placeholder="password"><br><br>
