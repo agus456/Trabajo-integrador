@@ -102,12 +102,10 @@ $colorConfirmar="red";}
 
 <body>
 
+
 <div class="registro">
-
-  <div class="formulario">
-    <h1 class="mensaje" >Registrate!</h1>
-
-<form class="" action="registro.php" method="post" >
+<h1 class="mensaje" >Registrate!</h1>
+<form class="" action="registro2.php" method="post" >
 
 
 <label for="nombre">Nombre:</label><br>
@@ -138,7 +136,7 @@ $colorConfirmar="red";}
 </form>
 
 </div>
-</div>
+
 </body>
 
 </html>

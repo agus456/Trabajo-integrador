@@ -17,7 +17,6 @@ function mostrarcaja(){
 	</script>
 
 
-
 <?php
 function calcularColor($imagenPublic) {
 	if ($imagenPublic=="ofertas.png") {
@@ -31,10 +30,14 @@ function calcularColor($imagenPublic) {
 	return $color;
 }
 
+
+
+
+
 $articulo1 = [
 	"id" => 1,
 	"nombre" => "Coca Cola",
-	"descripcion" => "<br>3 Litros",
+	"descripcion" => "<br>3 Litros Coca Cola",
 	"imagen" => "coca-cola-3l.png",
 	"imagenPublic"=>"ofertas.png",
 	"precio" =>  99.90
@@ -61,16 +64,16 @@ $articulo3 = [
 ];
 $articulo3["color"] = calcularColor($articulo3["imagenPublic"]);
 $articulo4 = [
-	"id" => 1,
+	"id" => 4,
 	"nombre" => "Coca Cola",
-	"descripcion" => "<br>3 Litros",
+	"descripcion" => "<br>3 Litros Coca Cola",
 	"imagen" => "coca-cola-3l.png",
 	"imagenPublic"=>"compras.png",
 	"precio" =>  99.90
 ];
 $articulo4["color"] = calcularColor($articulo4["imagenPublic"]);
 $articulo5 = [
-	"id" => 2,
+	"id" => 5,
 	"nombre" => "Papas Fritas",
 	"descripcion" => "<br>Lays<br>250 gr",
 	"imagen" => "lays-classic.png",
@@ -79,7 +82,7 @@ $articulo5 = [
 ];
 $articulo5["color"] = calcularColor($articulo5["imagenPublic"]);
 $articulo6 = [
-	"id" => 3,
+	"id" => 6,
 	"nombre" => "Protector Solar",
 	"descripcion" => "Dermaglos <br>Spray 170 ml<br> FPS 30",
 	"imagen" => "dermaglos.png",
@@ -88,33 +91,15 @@ $articulo6 = [
 ];
 $articulo6["color"] = calcularColor($articulo6["imagenPublic"]);
 $articulo7 = [
-	"id" => 1,
+	"id" => 7,
 	"nombre" => "Coca Cola",
-	"descripcion" => "<br>3 Litros",
+	"descripcion" => "<br>3 Litros Coca Cola",
 	"imagen" => "coca-cola-3l.png",
 	"imagenPublic"=>"consultas.png",
 	"precio" =>  99.90
 ];
-$articulo7["color"] = calcularColor($articulo7["imagenPublic"]);
-$articulo8 = [
-	"id" => 2,
-	"nombre" => "Papas Fritas",
-	"descripcion" => "<br>Lays<br>250 gr",
-	"imagen" => "lays-classic.png",
-	"imagenPublic"=>"consultas.png",
-	"precio" => 97
-];
-$articulo8["color"] = calcularColor($articulo8["imagenPublic"]);
-$articulo9 = [
-	"id" => 3,
-	"nombre" => "Protector Solar",
-	"descripcion" => "Dermaglos <br>Spray 170 ml<br> FPS 30",
-	"imagen" => "dermaglos.png",
-	"imagenPublic"=>"consultas.png",
-	"precio" => 495
-];
 
-$articulo9["color"] = calcularColor($articulo9["imagenPublic"]);
+$articulo7["color"] = calcularColor($articulo7["imagenPublic"]);
 
 
 
@@ -122,7 +107,7 @@ $articulo9["color"] = calcularColor($articulo9["imagenPublic"]);
 
 
 $articulos = [
-	$articulo1, $articulo2, $articulo3, $articulo4, $articulo5, $articulo6, $articulo7, $articulo8, $articulo9
+	$articulo1, $articulo2, $articulo3, $articulo4, $articulo5, $articulo6, $articulo7
 ];
 
 
@@ -150,62 +135,36 @@ $articulos = [
 		<title>Working Group</title>
 	</head>
 	<header>
+<div class="botones">
+<div class="boton"><select name="seleccionar"id="seleccionar" style="margin-left:10%;margin:0;width:100%;border:solid;border:white">
+ <option value="">Categorias</option>
+<option value="1">Almacén</option>
+<option value="2">Bebidas</option>
+<option value="3">Frescos</option>
+<option value="4">Congelados</option>
+<option value="5">Limpieza</option>
+<option value="6" >Perfumeria</option>
+<option value="7" >Electro</option>
+<option value="8" >Textil</option>
+<option value="9" >Hogar</option>
+<option value="10" >Aire Libre</option>
+
+</select></div>
+
+<div class="boton"style="padding-left:3%;padding-top: 0.5%" ><a href="index2.php">Nuevo</a></div>
+<div class="boton"style="padding-left:3%;padding-top: 0.5%" ><a href="login.php">Salir</a></div>
 
 
 
 
 
-
-	</header>
+</header>
 	<body>
-		<div class="nav">
 
-<div class="btn">
-
-	<li><a href="index.php">Inicio</a></li>
-
-
-</div>
-<div class="btn">
-	<li><a href="contacto.php">Contacto</a></li>
-</div>
-<div class="btn registro">
-	<li><a href="registro.php" style="margin-top:-10%">Registro</a></li>
-</div>
-<div class="btn login">
-	<li><a href="login.php">Login</a></li>
-</div>
-</div>
-
-
-<div class="col1">
-	<div class="btn-sel">
-	<select name="seleccionar"id="seleccionar">
-	 <option value="">Categorias</option>
-	<option value="1">Almacén</option>
-	<option value="2">Bebidas</option>
-	<option value="3">Frescos</option>
-	<option value="4">Congelados</option>
-	<option value="5">Limpieza</option>
-	<option value="6" >Perfumeria</option>
-	<option value="7" >Electro</option>
-	<option value="8" >Textil</option>
-	<option value="9" >Hogar</option>
-	<option value="10" >Aire Libre</option>
-
-	</select>
-</div>
-<div class="btn-sel">
-<button id="mostrar" onclick="mostrarcaja()">Tu Listado</botton>
-</div>
-<div class="caja"id="caja" style="display:none">
-	<p> Listado de Productos</p>
-</div>
-</div>
-
+  <form class="" action="index2.php" method="POST">
 <div class="columnas">
 
-<div class="col2">
+
 <div class="container">
 
 					<?php for ($i = 0; $i < count($articulos); $i++) { ?>
@@ -217,26 +176,68 @@ $articulos = [
 				<div class="card-data">
 				<img class="special" src="images/<?=$articulos[$i]["imagenPublic"]?>">
 				<br>
-			<p><strong><?=$articulos[$i]["nombre"]?> <br><?=$articulos[$i]["descripcion"]?></strong> </p>
+	<p><strong><?=$articulos[$i]["nombre"]?><br><?=$articulos[$i]["descripcion"]?></strong> </p>
 
-			<p style="font-weight:bold;color:<?=$articulos[$i]["color"]?>">
-				Precio: <?=$articulos[$i]["precio"]?>
-			</p>
+	<p style="font-weight:bold;color:<?=$articulos[$i]["color"]?>">
+		Precio: <?=$articulos[$i]["precio"]?>
 
+	</p>
 
-
-
-
-
-
-
-
-<input type="checkbox" value="">
+<select id="cantidad" name="<?=$articulos[$i]["id"]?>" style="width:40px; border-radius:20%" onChange="selectOnChange<?=$articulos[$i]["id"]?>(this)">
+<option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
 
 				</div>
 			</div>
 			<?php } ?>
-</div>
 
+<button  class="btn btn-secondary"type="submit"  id="guardar" style="padding-left:3%;font-size:1.2em">Guardar </button><br>
+</form>
+
+</div>
+<div class="listado" style="background-color:white;width:100%;height:20vh;text-align:center">
+	<h4><strong>Productos Seleccionados</strong></h4>
+			<ul>
+
+
+				<?php
+
+				 foreach ($_POST as $valor=>$cant) : ?>
+
+			<?php if ($cant!=0) : ?>
+			<li>
+				<strong><?=$cant?></strong>
+					<?=$articulos[$valor-1]["nombre"]?>
+
+				<strong>  <?=$articulos[$valor-1]["precio"]*$cant?></strong>
+
+
+				</li>
+	<?php endif;?>
+
+				 <?php if ($cant=0) : ?>
+				 <?php return null;?>
+						<?php endif;?>
+
+
+				<?php endforeach;?>
+
+
+			</ul>
+
+
+
+<a name="fin"></a>
+</div>
 </body>
 </html>

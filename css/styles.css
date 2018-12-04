@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-/* body{background: url(../images/bg-body.png);font-family: 'Raleway', sans-serif;} */
-
-body{
-  background-color: red;
-}
-
+body{background: url(../images/bg-body.png);font-family: 'Raleway', sans-serif;}
 a{display: inline-block;
 text-decoration: none;}
 ul{list-style: none;
@@ -56,11 +51,11 @@ opacity: 0.8;
 color:white;display: block;
 width: 35%;font-size: 1em;height: 13%;text-align: center;list-style: none;line-height: 35px}
 ul{list-style: none}
-.container,.nav,.columnas{display: flex;flex-wrap: wrap;}
+.container,.nav,.columnas{display: flex;flex-wrap: wrap;z-index: 99}
 span{display: none}
 li{margin-top: 0.5%;}
 
-button{width: 80%;position: relative;left: 10%}
+#enviar-registro{width: 30%;position: relative;left: -2%}
 
 
 
@@ -85,7 +80,7 @@ ul li a {float: right;
 width: 15%;}
 ul{overflow: hidden;}
 
-.container{margin-top: 1%}
+.container{margin-top: 3%}
 .btn{margin-bottom:1%}
 .col1,.col2{float: left;}
 .col1{width: 15%;height: 5vh;margin-top: 2.2%;border-radius: 2%;display: flex;flex-wrap: wrap}
@@ -93,7 +88,16 @@ ul{overflow: hidden;}
 #seleccionar{width: 100%;height: 5vh;border-radius: 7%;}
 .btn-sel{display: flex;flex-direction: column;width:100%;border-radius: 5%;background-color: white;height: 5vh;position: relative;margin-top: 5%;margin-left: 2%}
 .btn-sel button{ background-color: white;width: 100%;height: 100%;margin-left: -10%;border-radius: 10%}
-.caja{width: 100%;height: 50vh;background-color: #e0e0d1;margin-top: 10%;border-radius: 5%;margin-left: 3%}
+.caja{width: 30%;height: 50vh;background-color: #e0e0d1;margin-top: 2%;border-radius: 5%;margin-left: 2%;z-index: 1000}
+
+
+
+@media(max-width: 400px){
+  .registro{position: relative;}
+  .formulario{position: absolute;top:2%;left: -20%}
+
+}
+
 @media(max-width: 600px){
   .card{display: flex;
   align-items: stretch;
@@ -102,31 +106,74 @@ ul{overflow: hidden;}
 flex-direction: row;
   width:100%;border-radius: 5%;background-color: white;height: 5vh;position: relative}
   .nav{background-color: grey;height: 30vh}
+  .registro{position: relative;}
+  .formulario{position: absolute;top:2%;left: 30%}
+  #enviar-registro{width: 100%;position: relative;left: -2%;}
+  #guardar{width: 100%;height: 30vh;border-radius:10%;position:relative;top:1%;background-color:#e0e0d1}
+  .listado{margin-top: 10%}
 
 }
 
 
 
 @media(min-width: 600px){
-  .card{display: flex;
-  align-items: stretch;
-  width:45%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+
   .btn{display: flex;
   align-items: stretch;
   width:43%;border-radius: 5%;background-color: white;margin-left:5%;margin-top: 5%;height: 5vh;position: relative}
   .nav{background-color: grey;height: 35vh}
-  .login,.registro{margin-top: -5%}
-
+  .registro{position: relative;}
+  .formulario{position: absolute;top:2%;left: 40%}
+  #enviar-registro{width: 100%;position: relative;left: -2%}
   }
+  @media(max-width: 599px){
+    .card,.boton{display: flex;
+    align-items: stretch;
+    width:100%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+.boton{height: 5vh}
+
+}
+
+    @media(min-width: 600px){
+      .card,.boton{display: flex;
+      align-items: stretch;
+      width:45%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+      .boton{height: 5vh;width: 100%}
+        #guardar{width: 45%;height: 30vh;border-radius:10%;position:relative;top:-2%;left:-3.5%;background-color:#e0e0d1}
+}
 
 
-@media(min-width: 900px) {
-  .card{display: flex;
-  align-items: stretch;
-  width:28%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
-  .btn{display: flex;
-  align-items: stretch;
-  width:20%;border-radius: 5%;background-color: white;margin:2%;height: 5vh;position: relative}
-  .nav{background-color: grey;margin-bottom: 5%;height: 15vh}
 
-  }
+      @media(min-width: 700px){
+        .card,.boton{display: flex;
+        align-items: stretch;
+        width:28%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+            .boton{height: 5vh;width: 10%}
+#guardar{width: 29%;height: 30vh;border-radius:10%;position:relative;top:-3%;left:-3.5%;background-color:#e0e0d1}
+      }
+
+
+
+
+    @media(min-width: 900px) {
+    .card{display: flex;
+    align-items: stretch;
+    width:20%;border-radius: 5%;background-color: white;margin:2%;height: 30vh}
+    .boton{display: flex;
+    align-items: stretch;
+    width:10%;border-radius: 5%;background-color: white;margin:2%;height: 5vh}
+#guardar{width: 21%;height: 30vh;border-radius:10%;position:relative;top:-4.5%;left:-3.5%;background-color:#e0e0d1}
+
+    #enviar-registro{width: 100%;position: relative;left: -2%;border-radius: 10%;background-color: grey}
+    .registro{position: relative;}
+    .formulario{position: absolute;top:2%;left: 40%}
+
+
+    }
+
+    @media(min-width: 990px) {#guardar{width: 21%;height: 30vh;border-radius:10%;position:relative;top:-6.5%;left:-3.5%;background-color:#e0e0d1}}
+
+input{border-radius: 15%;width: 100%}
+.formulario{width: 17%}
+#mostrar{margin-left: -1%}
+.botones{display:flex;flex-wrap: wrap;background-color: grey;width: 100%}
